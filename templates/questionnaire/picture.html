@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script defer src="../static/questionnaire/js/validation.js"></script>
+
+</head>
+<body>
+
+<form method="post" id="currentForm" name="userForm" onsubmit = "return validateForm()">
+    <h4>Имя</h4>
+    <input type="text" name="userName" size="40" class="field" id="userName">
+    <h4>Фамилия</h4>
+    <input type="text" name="userSurname" size="40" class="field" id="userSurname">
+
+    <div><h4>Пол:</h4>
+   <input type="radio" name="gender" value="Man">Мужчина
+   <input type="radio" name="gender" value="Women">Женщина
+    </div><br>
+
+    <div>
+    <input type="checkbox" id="citizen" name="citizen" value="RU">
+    <label for="citizen">Гражданин РФ</label>
+    </div> <br>
+    <h4>Дата рождения:</h4>
+    <input type="date" id="dateBorn" name="dateBorn">
+
+    <h4>Образование</h4>
+    <p><select name="education" id="education">
+    <option value="">Выберите образование</option>
+    <option value="secondary">Среднее</option>
+    <option value="higher incomplete">Высшее неоконченное</option>
+    <option value="higher">Высшее</option>
+    </select></p>
+
+    <h4>О себе:</h4>
+    <textarea name="comment" id="comment"></textarea>
+
+    <div>
+        <button type="submit" id="save">Сохранить</button>
+    </div>
+</form>
+
+<script>
+    if ( window.history.replaceState ) {
+        window.history.replaceState( null, null, window.location.href );
+    }
+    onSelect: function Datepicker() {
+	    $( "#dateBorn" ).datepicker({
+        dateFormat: 'yyyy-mm-dd'
+        });
+        }
+</script>
+
+
+</body>
+
+
+
+
+
+</html>
