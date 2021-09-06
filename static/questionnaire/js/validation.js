@@ -4,7 +4,7 @@ function validateForm()  {
     var gender = document.getElementsByName("gender");
     var date = document.getElementById("dateBorn").value;
     var education = document.getElementById("education").value;
-    var str = /^[a-zA-Zа-яА-ЯёЁ'][a-zA-Z-а-яА-ЯёЁ' ]+[a-zA-Zа-яА-ЯёЁ']?$/;
+    var str = /^[A-ZА-ЯЁ'][a-zа-яё']+$/;
 
     if (name == "") {
         alert("Пожалуйста, введите имя");
