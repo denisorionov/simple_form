@@ -12,7 +12,7 @@ function validateForm()  {
                 }
 
     if (! name.match(str)) {
-        alert("Имя должно содержать только буквы");
+        alert("Имя должно содержать только буквы и начинаться с заглавной буквы");
         return false
                 }
 
@@ -22,7 +22,7 @@ function validateForm()  {
                 }
 
     if (! surname.match(str)) {
-        alert("Фамилия должна содержать только буквы");
+        alert("Фамилия должна содержать только буквы и начинаться с заглавной буквы");
         return false
                 }
 
